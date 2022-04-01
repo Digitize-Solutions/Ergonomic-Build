@@ -16,7 +16,7 @@
     margin: 20px 0;
     display: grid;
     grid-template-columns: 250px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
 }
 .card-main{
