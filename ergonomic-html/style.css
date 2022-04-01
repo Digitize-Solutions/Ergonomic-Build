@@ -1,0 +1,54 @@
+
+.hor-row{
+    width: 100%;
+    text-align: center;
+    /* float: left; */
+    display: inline-block;
+    box-sizing: border-box;
+}
+.outer-container{
+    max-width: 1200px;
+    display: inline-block;
+    float: none;
+
+}
+.card-container-main{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+.card-main{
+    display: inline-block;
+    background: #e1e1e1;
+    padding: 10px 15px 20px;
+
+}
+.img-container img{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+.heading-main{
+    font-size: 20px;
+    color: #000;
+}
+.sub-heading-main{
+    color: #090909;
+}
+.config-submit-button{
+    width: 80%;
+    margin-left: 10%;
+    background: #5757e7;
+    color: #fff;
+    padding: 13px 0;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+.config-submit-button:hover{
+    background: #4444b7;    
+}

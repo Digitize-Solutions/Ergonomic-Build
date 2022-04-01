@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chair</title>
+</head>
+<body class="hor-row">
+
+    <div class="hor-row outer-container"  id="cardContainerMain">
+    </div>
+
+    <script>
+         const products = [
+             {
+                name: "Alexis",
+                image: "http://ecdergo.com/wp-content/uploads/2022/01/ECD-Pursue-m-01-V-1280px-682x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1100"
+            },
+            {
+                name: "Lagos",
+                image: "http://ecdergo.com/wp-content/uploads/2020/02/2019-ECD-Catalog-NewChair-4-4-660x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1350"
+
+            },
+            {
+                name: "Quest",
+                image: "http://ecdergo.com/wp-content/uploads/2018/08/IMG_5448-683x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1400"
+            },
+            {
+                name: "Vive",
+                image: "http://ecdergo.com/wp-content/uploads/2018/08/IMG_5448-683x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1060"
+            },
+            {
+                name: "QTU",
+                image: "http://ecdergo.com/wp-content/uploads/2018/08/IMG_5448-683x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1500"
+            },
+            {
+                name: "QT",
+                image: "http://ecdergo.com/wp-content/uploads/2017/10/ECD-QT-04-V-450px.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1200"
+            },
+             {
+                name: "Alexis",
+                image: "http://ecdergo.com/wp-content/uploads/2022/01/ECD-Pursue-m-01-V-1280px-682x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1100"
+            },
+            {
+                name: "Lagos",
+                image: "http://ecdergo.com/wp-content/uploads/2020/02/2019-ECD-Catalog-NewChair-4-4-660x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1350"
+
+            },
+            {
+                name: "Quest",
+                image: "http://ecdergo.com/wp-content/uploads/2018/08/IMG_5448-683x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1400"
+            },
+            {
+                name: "Vive",
+                image: "http://ecdergo.com/wp-content/uploads/2018/08/IMG_5448-683x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1060"
+            },
+            {
+                name: "QTU",
+                image: "http://ecdergo.com/wp-content/uploads/2018/08/IMG_5448-683x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1500"
+            },
+            {
+                name: "QT",
+                image: "http://ecdergo.com/wp-content/uploads/2017/10/ECD-QT-04-V-450px.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1200"
+            },
+             {
+                name: "Alexis",
+                image: "http://ecdergo.com/wp-content/uploads/2022/01/ECD-Pursue-m-01-V-1280px-682x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1100"
+            },
+            {
+                name: "Lagos",
+                image: "http://ecdergo.com/wp-content/uploads/2020/02/2019-ECD-Catalog-NewChair-4-4-660x1024.jpg",
+                configuratorLink: "https://www.google.com",
+                price: "$1350"
+
+            },
+        ]
+
+        const loadImages = () => {
+            const htmlElement = document.getElementById('cardContainerMain');
+            const BASE_URL = 'https://digitize-solutions.github.io/Ergonomic-Build';
+            let htmlString = '<div class="hor-row card-container-main" id="cardContainerMain">';
+            let temp = document.createElement('div');
+
+            products.forEach((item)=>{
+                htmlString += `
+                <div class="card-main">
+                <div class="img-container">
+                    <img src="`+ item.image +`" alt="chair"/>
+                </div>
+                <h2 class="hor-row heading-main">
+                    `+item.name+`
+                </h2>
+                <div class="hor-row sub-heading-main">
+                    `+ 'Starts from ' + item.price+`
+                </div>
+                <a href="` + BASE_URL + "/#/landing?chairType=" + item.name +`"> <button class="hor-row config-submit-button">
+                    CONFIGURE CHAIR
+                </button></a>
+            </div>
+            `;
+            })
+
+            htmlString += '</div>';
+            temp.innerHTML = htmlString;
+            htmlElement.appendChild(temp)
+        }
+
+        loadImages();
+        
+    </script>
+
+</body>
+</html>
+
