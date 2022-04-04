@@ -2,7 +2,6 @@
 .hor-row{
     width: 100%;
     text-align: center;
-    /* float: left; */
     display: inline-block;
     box-sizing: border-box;
 }
@@ -39,7 +38,6 @@
 }
 .config-submit-button{
     width: 80%;
-    margin-left: 10%;
     background: #5757e7;
     color: #fff;
     padding: 13px 0;
@@ -53,8 +51,9 @@
     background: #4444b7;    
 }
 
+ /* For mobile phones: */
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+ 
   .card-container-main {    
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
