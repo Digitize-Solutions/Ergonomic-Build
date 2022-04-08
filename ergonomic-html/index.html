@@ -4,6 +4,70 @@
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chair</title>
+  <style>
+      .hor-row{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.outer-container{
+    max-width: 1400px;
+    display: inline-block;
+    float: none;
+
+}
+.card-container-main{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+.card-main{
+    display: inline-block;
+    background: #e1e1e1;
+    padding: 10px 15px 20px;
+
+}
+.img-container img{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+.heading-main{
+    font-size: 20px;
+    color: #000;
+}
+.sub-heading-main{
+    color: #090909;
+}
+.config-submit-button{
+    width: 80%;
+    background: #5757e7;
+    color: #fff;
+    padding: 13px 0;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+.config-submit-button:hover{
+    background: #4444b7;    
+}
+
+ /* For mobile phones: */
+@media only screen and (max-width: 768px) {
+ 
+  .card-container-main {    
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    place-content: center;
+ 
+  }
+}
+  </style>
 </head>
 <body class="hor-row">
 
@@ -32,7 +96,7 @@
           price : "$1400"
         },
         {
-          name : "Quest Lite",
+          name : "Quest_Lite",
           image : "http://ecdergo.com/wp-content/uploads/2021/02/ECD-Quest-Front-1280px-682x1024.jpg",
           configuratorLink : "https://www.google.com",
           price : "$1400"
@@ -56,31 +120,31 @@
           price : "$1200"
         },
         {
-          name : "VARIANT",
+          name : "Variant",
           image : "http://ecdergo.com/wp-content/uploads/2017/10/Variant-ii-21-640px-04.jpg",
           configuratorLink : "https://www.google.com",
           price : "$1200"
         },
         {
-          name : "PURSUE",
+          name : "Pursue",
           image : "http://ecdergo.com/wp-content/uploads/2022/01/ECD-Pursue-m-04-V-1280px-682x1024-682x1024.jpg",
           configuratorLink : "https://www.google.com",
           price : "$1200"
         },
         {
-          name : "TUSCANY",
+          name : "Tuscany",
           image : "http://ecdergo.com/wp-content/uploads/2020/07/ecd-chair-category-Tuscany-300px-1.jpg",
           configuratorLink : "https://www.google.com",
           price : "$1200"
         },
         {
-          name : "TRUDEAU",
+          name : "Trudeau",
           image : "http://ecdergo.com/wp-content/uploads/2020/07/Trudeau-3qtr300px.jpg",
           configuratorLink : "https://www.google.com",
           price : "$1200"
         },
         {
-          name : "RENAISSANCE",
+          name : "Renaissance",
           image : "http://ecdergo.com/wp-content/uploads/2020/01/2019-ECD-Catalog-Renaissance-1-2-791x1024.jpg",
           configuratorLink : "https://www.google.com",
           price : "$1200"
@@ -124,4 +188,3 @@
 
 </body>
 </html>
-
