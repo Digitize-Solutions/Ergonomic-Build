@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chair</title>
+  <style>
+      .hor-row{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.outer-container{
+    max-width: 1400px;
+    display: inline-block;
+    float: none;
+
+}
+.card-container-main{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+.card-main{
+    display: inline-block;
+    background: #e1e1e1;
+    padding: 10px 15px 20px;
+
+}
+.img-container img{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+.heading-main{
+    font-size: 20px;
+    color: #000;
+}
+.sub-heading-main{
+    color: #090909;
+}
+.config-submit-button{
+    width: 80%;
+    background: #5757e7;
+    color: #fff;
+    padding: 13px 0;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+.config-submit-button:hover{
+    background: #4444b7;    
+}
+
+ /* For mobile phones: */
+@media only screen and (max-width: 768px) {
+ 
+  .card-container-main {    
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    place-content: center;
+ 
+  }
+}
+  </style>
+</head>
+<body class="hor-row">
+
+    <div class="hor-row outer-container"  id="cardContainerMain">
+    </div>
+
+    <script>
+         const products = [
+        {
+          name : "Alexis",
+          image : "http://ecdergo.com/wp-content/uploads/2017/10/ECD-Alexis-04-V-1280px-682x1024.jpg",
+          configuratorLink : "https://www.google.com",
+          price : "$1100"
+        },
+        
+
+        ]
+
+        const loadImages = () => {
+            const htmlElement = document.getElementById('cardContainerMain');
+            const BASE_URL = 'https://digitize-solutions.github.io/Ergonomic-Build';
+            let htmlString = '<div class="hor-row card-container-main" id="cardContainerMain">';
+            let temp = document.createElement('div');
+
+            products.forEach((item)=>{
+                htmlString += `
+                <div class="card-main">
+                <div class="img-container">
+                    <img src="`+ item.image +`" alt="chair"/>
+                </div>
+                <h2 class="hor-row heading-main">
+                    `+item.name+`
+                </h2>
+                <div class="hor-row sub-heading-main">
+                    `+ 'Starts from ' + item.price+`
+                </div>
+                <a href="` + BASE_URL + "#/chair?chairType=" + item.name +`"> <button class="hor-row config-submit-button">
+                    CONFIGURE CHAIR
+                </button></a>
+            </div>
+            `;
+            })
+
+            htmlString += '</div>';
+            temp.innerHTML = htmlString;
+            htmlElement.appendChild(temp)
+        }
+
+        loadImages();
+        
+    </script>
+
+</body>
+</html>
